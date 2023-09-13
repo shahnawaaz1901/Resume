@@ -9,6 +9,16 @@ body{
     font-size: 25px;
 }
 
+section:nth-child(2n + 1){
+    background-color: lightgray;
+}
+
+section{
+    height: 600px;
+    width: 90%;
+}
+
+/* Common Styling */
 .text-center{
     text-align: center;
 }
@@ -34,7 +44,7 @@ header{
     margin: 0px;
     padding: 10px 0px;
     color: white;
-    background-image: url('https://ninjasfiles.s3.amazonaws.com/asset_0000000000000020_1549743985_macbook_mouse.jpg');
+    background-image: url('./macbook_mouse.jpg');
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
@@ -55,10 +65,27 @@ header{
     margin-top: 60px;
 }
 .social-icons li{
-    padding: 10px;
+    padding: 10px 15px;
     border-radius: 50%;
 }
 
 .social-icons li:hover{
     box-shadow: 0px 0px 6px 3px white;
+}
+
+/* Profile Photo */
+
+.profile-image{
+    height: 300px;
+    width: 300px;
+    position: relative;
+    border-radius: 50% ;
+    opacity: 1.0;
+    margin: auto;
+}
+
+.profile-image img{
+    height: 100%;
+    width: 100%;
+    border-radius: 50% ;
 }

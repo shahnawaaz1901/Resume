@@ -1,0 +1,64 @@
+/* Common For All */
+html{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-size: 25px;
+}
+
+.text-center{
+    text-align: center;
+}
+/* Nav Bar */
+.horizontal-list li{
+    display: inline-block;
+    list-style: none;
+    margin: 0px 30px 20px 30px;
+}
+
+.horizontal-list li a{
+    color: white;
+    text-decoration: none;
+    transition: all 1s ease-in-out;
+}
+
+nav .horizontal-list li a:hover{
+    color: black;
+    text-decoration: underline black;
+}
+
+header{
+    margin: 0px;
+    padding: 10px 0px;
+    color: white;
+    background-image: url('https://ninjasfiles.s3.amazonaws.com/asset_0000000000000020_1549743985_macbook_mouse.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    opacity: 0.8;
+    width: 100vw;
+    height: 75vh;
+}
+/* Name */
+.name{
+    font-weight: 900;
+    letter-spacing: 4px;
+    margin-top: 100px;
+    font-family: 'Times New Roman';
+}
+
+/* Social Icons */
+.social-icons{
+    margin-top: 60px;
+}
+.social-icons li{
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.social-icons li:hover{
+    box-shadow: 0px 0px 6px 3px white;
+}

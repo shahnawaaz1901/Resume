@@ -12,11 +12,11 @@ body{
 section:nth-child(2n + 1){
     background-color: lightgray;
 }
-
+/* 
 section{
     height: 600px;
     width: 90%;
-}
+} */
 
 /* Common Styling */
 .text-center{
@@ -80,12 +80,34 @@ header{
     width: 300px;
     position: relative;
     border-radius: 50% ;
-    opacity: 1.0;
+    opacity: 1.5;
     margin: auto;
+    margin-top: -10%;
 }
 
 .profile-image img{
     height: 100%;
     width: 100%;
     border-radius: 50% ;
+}
+
+@media screen and (max-width:900px){
+    .nav-bar{
+        display: none;
+    }
+    .profile-image{
+        margin-top: -15%;
+    }
+}
+
+@media screen and (max-width:500px){
+    .profile-image{
+        margin-top: -20%;
+    }
+}
+
+@media screen and (max-width:500px){
+    .profile-image{
+        margin-top: -25%;
+    }
 }

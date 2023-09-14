@@ -9,15 +9,13 @@ body{
     font-size: 25px;
 }
 
-section:nth-child(2n + 1){
+section:nth-child(2n){
     background-color: lightgray;
 }
-/* 
-section{
-    height: 600px;
-    width: 90%;
-} */
-
+.section-heading{
+    color: #2858a5;
+    font-weight: 100;
+}
 /* Common Styling */
 .text-center{
     text-align: center;
@@ -31,6 +29,10 @@ section{
     text-align: end;
 }
 
+.text-justify{
+    text-align: justify;
+}
+
 .bg-gold{
     background-color:#edcf92;
 }
@@ -39,6 +41,29 @@ section{
     margin: auto;
 }
 
+.mb-75px{
+    margin-bottom: 75px;
+}
+
+.mt-75px{
+    margin-top: 75px;
+}
+
+.color-blue{
+    color: #2858a5;
+}
+
+.color-orange{
+    color: #eb8537;;
+}
+
+.color-grey{
+    color: #777d8c;
+}
+
+.text-highlighter{
+    color: #2858a5;
+}
 /* Nav Bar */
 .horizontal-list li{
     display: inline-block;
@@ -60,7 +85,7 @@ nav .horizontal-list li a:hover{
 
 .bar-list{
     display: none;
-    position: absolute;
+    position: sticky;
     right: 5%;
     top: 5%;
 }
@@ -75,10 +100,19 @@ nav .horizontal-list li a:hover{
 }
 
 .list ul li{
+
     margin:10px;
+    border-bottom: 1px solid black;
 }
 
+.list ul{
+    padding: 0px;
+    box-shadow: 0px 0px 4px 4px black;
+}
 
+.bar-list:hover .list{
+    display: block;
+}
 /* Header */
 header{
     margin: 0px;
@@ -96,7 +130,6 @@ header{
 .name{
     font-weight: 900;
     letter-spacing: 4px;
-    margin-top: 100px;
     font-family: 'Times New Roman';
 }
 
@@ -116,7 +149,7 @@ header{
 
 
 
-/* Profile Photo */
+/* Profile Photo & About Section */
 
 .profile-image{
     height: 300px;
@@ -125,13 +158,32 @@ header{
     border-radius: 50% ;
     opacity: 1.5;
     margin: auto;
-    margin-top: -10%;
+    margin-top: -12%;
 }
 
 .profile-image img{
     height: 100%;
     width: 100%;
     border-radius: 50% ;
+}
+
+
+#about{
+    width: 70%;
+    font-size: 23px;
+    font-weight: 500;
+    line-height: 1.5;
+    color:dimgray
+
+}
+
+#about a{
+    text-decoration: none;
+}
+
+#about a:hover{
+    text-decoration: underline;
+    color: #eb8537;
 }
 
 @media screen and (max-width:900px){
@@ -150,6 +202,9 @@ header{
     .bar-list .list{
         display: none;
     }
+    .horizontal-list li{
+        margin: 0px 20px 15px 20px;
+    }
 }
 
 @media screen and (max-width:500px){
@@ -164,9 +219,14 @@ header{
     }
 }
 
-.bar-list:hover .list{
-    display: block;
-    /* border: 1px solid black; */
+#skills{
+    display: flex;
+    margin: auto;
+    width: 70%;
 }
 
-
+.total-skills{
+    height: 3rem;
+    width: 11rem;
+    border: 1px solid black;
+}

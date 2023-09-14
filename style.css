@@ -22,10 +22,26 @@ section{
 .text-center{
     text-align: center;
 }
+
+.none-list{
+    list-style: none;
+}
+
+.text-end{
+    text-align: end;
+}
+
+.bg-gold{
+    background-color:#edcf92;
+}
+
+.m-auto{
+    margin: auto;
+}
+
 /* Nav Bar */
 .horizontal-list li{
     display: inline-block;
-    list-style: none;
     margin: 0px 30px 20px 30px;
 }
 
@@ -40,6 +56,30 @@ nav .horizontal-list li a:hover{
     text-decoration: underline black;
 }
 
+/* Bars */
+
+.bar-list{
+    display: none;
+    position: absolute;
+    right: 5%;
+    top: 5%;
+}
+
+.bar{
+    font-size: 40px;
+}
+
+.list ul li a{
+    color: black;
+    text-decoration: none;
+}
+
+.list ul li{
+    margin:10px;
+}
+
+
+/* Header */
 header{
     margin: 0px;
     padding: 10px 0px;
@@ -73,6 +113,9 @@ header{
     box-shadow: 0px 0px 6px 3px white;
 }
 
+
+
+
 /* Profile Photo */
 
 .profile-image{
@@ -98,6 +141,15 @@ header{
     .profile-image{
         margin-top: -15%;
     }
+
+    .bar-list{
+        display: block;
+        position: fixed;
+    }
+
+    .bar-list .list{
+        display: none;
+    }
 }
 
 @media screen and (max-width:500px){
@@ -111,3 +163,10 @@ header{
         margin-top: -25%;
     }
 }
+
+.bar-list:hover .list{
+    display: block;
+    /* border: 1px solid black; */
+}
+
+

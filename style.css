@@ -10,14 +10,24 @@ body{
     overflow-x: hidden;
 }
 
+section{
+    width: 100%;
+}
+
 section:nth-child(2n){
-    background-color: lightgray;
+    background-color: rgb(233, 233, 233);
 }
 .section-heading{
     color: #2858a5;
     font-weight: 100;
 }
-/* Common Styling */
+.section-heading span{
+    margin-right: 15px;
+}
+/* --Common Styling-- */
+
+
+/* Alignment */
 .text-center{
     text-align: center;
 }
@@ -37,7 +47,7 @@ section:nth-child(2n){
 .bg-gold{
     background-color:#edcf92;
 }
-
+/* Margin Padding */
 .m-auto{
     margin: auto;
 }
@@ -49,10 +59,16 @@ section:nth-child(2n){
 .mt-75px{
     margin-top: 75px;
 }
-.pt-30px
-{
+.pt-30px{
     padding-top: 30px;
 }
+
+.pb-30px{
+    padding-bottom: 30px;
+
+}
+
+/* Color */
 .color-blue{
     color: #2858a5;
 }
@@ -64,17 +80,43 @@ section:nth-child(2n){
 .color-grey{
     color: #777d8c;
 }
-
+/* Background Color */
 .bg-blue{
     background-color: #2858a5;
 }
 
-.bg-oranger{
-    background-color: #eb8537;
+.bg-orange {
+    background-color: #ec4d1c;
 }
+
+.bg-green {
+    background-color: #0b8176;
+}
+
+.bg-light-purple {
+    background-color: #93738c;
+}
+/* Percentage */
+.eightyFive-per{
+    width: 85%;
+}
+
+.seventyFive-per{
+    width: 75%;
+}
+
+.seventy-per{
+    width: 70%;
+}
+
+.eighty-per{
+    width: 80%;
+}
+
 
 .text-highlighter{
     color: #2858a5;
+    font-weight: 550;
 }
 
 /* Nav Bar */
@@ -113,9 +155,9 @@ nav .horizontal-list li a:hover{
 }
 
 .list ul li{
-
     margin:10px;
-    border-bottom: 1px solid black;
+    transition: 0.5s all ease-in;
+    /* border-bottom: 1px solid black; */
 }
 
 .list ul{
@@ -125,6 +167,10 @@ nav .horizontal-list li a:hover{
 
 .bar-list:hover .list{
     display: block;
+}
+
+.list ul li:hover{
+    border-bottom: 1px solid black;
 }
 /* Header */
 header{
@@ -234,22 +280,58 @@ header{
 
 .skills-container{
     width: 70%;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    color: white;
 }
 
-.total-skills{
+/* Skills Section */
+.skill{
     width: 10rem;
     height: 2.5rem;
-    border: 1px solid black;
-    margin: 20px;
+    margin: 20px 20px 40px 20px;
     border-radius: 1.3rem;
+    overflow: hidden;
+    background-color: #D3D3D3;
+    /* border: 1px solid black; */
 }
 
 .skill-progress{
-    padding-left: 10px;
-    vertical-align: middle;
+    height: 100%;
+    padding-top: 5%;
+    box-shadow: 1px 1px 4px 1px grey;
+    border-radius: 24px 0px 0px 24px;
+}
+
+.skill-name{
+    color: white;
+    margin-left: 15px;
+}
+
+/* Education Section */
+#education-container{
+    width: 70%;
+    /* height: 500px; */
+    border: 1px solid black;
+}
+
+.timelinebox{
+    width: 40%;
+    min-width: 300px;
+    height: 300px;
+    border: 1px solid black;
+    margin: 15px 15px 15px 5%;
+}
+
+.timelinebox:nth-child(2n){
+    margin-left: 55%;
+}
+
+
+/* Contact */
+#contact{
+    color: white;
+    width: 100%;
+    background-image: linear-gradient(rgb(40, 87, 164), rgb(64, 48, 102));
 }

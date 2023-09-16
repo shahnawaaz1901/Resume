@@ -44,9 +44,7 @@ section:nth-child(2n){
     text-align: justify;
 }
 
-.bg-gold{
-    background-color:#edcf92;
-}
+
 /* Margin Padding */
 .m-auto{
     margin: auto;
@@ -81,6 +79,10 @@ section:nth-child(2n){
     color: #777d8c;
 }
 /* Background Color */
+.bg-gold{
+    background-color:#edcf92;
+}
+
 .bg-blue{
     background-color: #2858a5;
 }
@@ -218,6 +220,7 @@ header{
     opacity: 1.5;
     margin: auto;
     margin-top: -12%;
+    box-shadow: 1px 1px 4px 4px white;
 }
 
 .profile-image img{
@@ -344,4 +347,47 @@ header{
 
 .contact-heading span{
     margin-right: 15px;
+}
+
+.contact-container{
+    width: 70%;
+    /* border: 1px solid white; */
+}
+
+.contact-form{
+    display: inline-block;
+    width: 45%;
+    /* border: 1px solid white; */
+}
+
+.contact-info{
+    display: inline-block;
+    /* border: 1px solid white; */
+    vertical-align: top;
+    width: 45%;
+    margin-left: 8%;
+}
+
+.contact-form input, textarea{
+    color: white;
+    padding: 15px 10px;
+    width: 90%;
+    max-width: 90%;
+    background-color: transparent;
+    margin:15px 0px;
+    border: transparent;
+    border-bottom: 1px solid white;
+}
+
+.contact-form button{
+    padding: 10px 20px;
+    letter-spacing: 2px;
+    color: white;
+    background-color: transparent;
+    border: 1px solid white;
+}
+
+.contact-form button:hover{
+    color:#124ca9;;
+    background-color: white;
 }

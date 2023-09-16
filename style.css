@@ -351,18 +351,18 @@ header{
 
 .contact-container{
     width: 70%;
-    /* border: 1px solid white; */
+    border: 1px solid white;
 }
 
 .contact-form{
     display: inline-block;
     width: 45%;
-    /* border: 1px solid white; */
+    border: 1px solid white;
 }
 
 .contact-info{
     display: inline-block;
-    /* border: 1px solid white; */
+    border: 1px solid white;
     vertical-align: top;
     width: 45%;
     margin-left: 8%;

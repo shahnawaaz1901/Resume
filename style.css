@@ -335,3 +335,13 @@ header{
     width: 100%;
     background-image: linear-gradient(rgb(40, 87, 164), rgb(64, 48, 102));
 }
+
+.contact-heading{
+    font-size: 40px;
+    color: white;
+    font-weight: 100;
+}
+
+.contact-heading span{
+    margin-right: 15px;
+}

@@ -350,12 +350,13 @@ header{
 }
 
 .contact-container{
-    width: 70%;
+    width: 75%;
+    display: flex;
+    justify-content: space-between;
     border: 1px solid white;
 }
 
 .contact-form{
-    display: inline-block;
     width: 49%;
     border: 1px solid white;
 }
@@ -364,7 +365,7 @@ header{
     display: inline-block;
     border: 1px solid white;
     vertical-align: top;
-    width: 45%;
+    width: 48%;
     /* margin-left: 8%; */
 }
 
@@ -395,14 +396,25 @@ header{
 
 .sub-heading{
     font-size: 30px;
-    margin:5px 0px;
+    margin:15px 0px;
     font-weight: 550;
     margin-top: 10px;
+    letter-spacing: 2px;
 }
 
 .contact-content{
+    margin-left: 15px;
     font-size: 20px;
     line-height: 2;
+    letter-spacing: 2px;
+}
+
+.contact-content i{
+    font-size: 20px;
+}
+
+.contact-content span{
+    margin-right: 5px;
 }
 
 @media screen and (max-width:1000px){

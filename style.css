@@ -345,7 +345,7 @@ header{
 
 /* Portfolio Secion */
 .portfolio-container{
-    width: 70%;
+    width: 75%;
     border: 1px solid black;
     display: flex;
     flex-wrap: wrap;

@@ -353,12 +353,30 @@ header{
 }
 
 .project{
-    min-height: 300px;
-    min-width: 300px;
+    height: 300px;
+    width: 300px;
     border: 1px solid black;
     margin: 10px 0px;
+    /* overflow: hidden; */
 }
 
+.project-logo{
+    height: 100%;
+    width: 100%;
+
+}
+
+.project-logo img{
+    height: 100%;
+    width: 100%; 
+}
+
+
+.project-logo:hover .project-details{
+    color: white;
+    background-color: black;
+    overflow: visible;
+}
 
 @media screen and (max-width:1200px) {
     .portfolio-container{

@@ -185,7 +185,7 @@ header{
     background-attachment: fixed;
     opacity: 0.8;
     width: 100vw;
-    height: 75vh;
+    height: 70vh;
 }
 /* Name */
 .name{
@@ -281,15 +281,15 @@ header{
     }
 }
 
+/* Skills Section */
 .skills-container{
     width: 70%;
-    /* border: 1px solid black; */
+    border: 1px solid black;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
 }
 
-/* Skills Section */
 .skill{
     width: 10rem;
     height: 2.5rem;
@@ -312,17 +312,29 @@ header{
     margin-left: 15px;
 }
 
+@media screen and (max-width:400px){
+    .skills-container{
+        width: 85%;
+    }
+}
+
+
+@media screen and (max-width:300px){
+    .skills-container{
+        width: 95%;
+    }
+}
 /* Education Section */
 #education-container{
     width: 70%;
-    /* height: 500px; */
     border: 1px solid black;
+    position: relative;
 }
 
 .timelinebox{
     width: 40%;
-    min-width: 300px;
     height: 300px;
+    min-width: 300px;
     border: 1px solid black;
     margin: 15px 15px 15px 5%;
 }
@@ -331,7 +343,36 @@ header{
     margin-left: 55%;
 }
 
+/* Portfolio Secion */
+.portfolio-container{
+    width: 70%;
+    border: 1px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
 
+.project{
+    min-height: 300px;
+    min-width: 300px;
+    border: 1px solid black;
+    margin: 10px 0px;
+}
+
+
+@media screen and (max-width:1200px) {
+    .portfolio-container{
+        width: 90%;
+        justify-content: space-around;
+    }
+
+}
+
+@media screen and (max-width:700px) {
+    .portfolio-container{
+        width: 100%;
+    }
+}
 /* Contact */
 #contact{
     color: white;
@@ -343,6 +384,7 @@ header{
     font-size: 40px;
     color: white;
     font-weight: 100;
+    margin-top: 0px;
 }
 
 .contact-heading span{
@@ -353,17 +395,17 @@ header{
     width: 75%;
     display: flex;
     justify-content: space-between;
-    border: 1px solid white;
+    /* border: 1px solid white; */
 }
 
 .contact-form{
     width: 49%;
-    border: 1px solid white;
+    /* border: 1px solid white; */
 }
 
 .contact-info{
     display: inline-block;
-    border: 1px solid white;
+    /* border: 1px solid white; */
     vertical-align: top;
     width: 48%;
     /* margin-left: 8%; */
@@ -417,27 +459,50 @@ header{
     margin-right: 5px;
 }
 
+.contact-container button{
+    font-weight: 550;
+}
+
 @media screen and (max-width:1000px){
     .contact-container{
         width: 80%;
+    }
+    .contact-info{
+        width: 51%;
     }
 }
 
 @media screen and (max-width:900px){
     .contact-container{
+        width: 85%;
+    }
+}
+
+@media screen and (max-width:800px){
+    .contact-container{
         width: 90%;
     }
+}
 
+@media screen and (max-width:700px){
+    .contact-container{
+        display: block;
+    }
     .contact-form{
-        display: block;
-        width: 100%;
+        width: 90%;
+        margin-bottom: 50px;
     }
-
-    .contact-form input, .contact-form textarea{
-        width: 100%;
+    .contact-form button{
+        margin-bottom: 50px;
     }
-
     .contact-info{
-        display: block;
+        width: 100%;
     }
+}
+
+@media screen and (max-width:400px){
+    .contact-form{
+        width: 100%;
+    }
+
 }

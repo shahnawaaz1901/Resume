@@ -422,11 +422,10 @@ header{
 }
 
 .contact-info{
-    display: inline-block;
     /* border: 1px solid white; */
     vertical-align: top;
     width: 48%;
-    /* margin-left: 8%; */
+    padding-top: 15px;
 }
 
 .contact-form input, textarea{
@@ -446,6 +445,9 @@ header{
     box-shadow: 0px 0px 5px 1px white;
 }
 
+.contact-form input:focus, textarea:focus{
+    outline: none;
+}
 .contact-form button{
     padding: 10px 20px;
     letter-spacing: 2px;

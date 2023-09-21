@@ -258,7 +258,7 @@ header{
 
     .bar-list{
         display: block;
-        position: fixed;
+        position: absolute;
     }
 
     .bar-list .list{
@@ -324,25 +324,52 @@ header{
         width: 95%;
     }
 }
+
 /* Education Section */
 #education-container{
     width: 70%;
     border: 1px solid black;
     position: relative;
+    height: 500px;
 }
 
-.timelinebox{
-    width: 40%;
-    height: 300px;
-    min-width: 300px;
-    border: 1px solid black;
-    margin: 15px 15px 15px 5%;
+.timeline-divider{
+    position: absolute;
+    left: 50%;
+    top:10%;
+    width: 0px;
+    height: 70%;
+    border: 1px dashed grey;
 }
 
-.timelinebox:nth-child(2n){
-    margin-left: 55%;
+.timeline-traveller{
+    position: sticky;
+    top: 15%;
+    transform: rotate(90deg);
+}
+.timeline-traveller i{
+    display: block;
+    margin-top: -15px;
+    top: 15%;
 }
 
+@media screen and (max-width:1200px){
+    #education-container{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width:1000px){
+    #education-container{
+        width: 90%;
+    }
+}
+
+@media screen and (max-width:800px){
+    #education-container{
+        width: 100%;
+    }
+}
 /* Portfolio Secion */
 .portfolio-container{
     width: 75%;
@@ -445,10 +472,9 @@ header{
 }
 
 .contact-info{
-    /* border: 1px solid white; */
-    vertical-align: top;
     width: 48%;
     padding-top: 15px;
+    padding-left: 15px;
 }
 
 .contact-form input, textarea{

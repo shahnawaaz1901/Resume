@@ -338,23 +338,44 @@ header{
     left: 5%;
     width: 40%;
     height: 300px;
-    min-width: 300px;
+    /* min-width: 300px; */
     border: 1px solid black;
 }
 
+.education-logo{
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+}
+
+.education-logo img{
+    height: 100%;
+    width: 100%;
+}
 .timeline-box:nth-child(2n){
     left:55%
 }
 
 .timeline-box::after{
     content: '';
+    z-index: 1;
     height: 15px;
     width: 15px;
     background-color: gray;
     border-radius: 50%;
-    display: block;
+    /* display: block; */
+    position: absolute;
+    top: 15%;
+    left: 115%;
 }
 
+
+.timeline-box:nth-child(2n)::after{
+    right: -115%;
+}
 
 .timeline-divider{
     position: absolute;
@@ -367,7 +388,7 @@ header{
 
 .timeline-traveller{
     position: sticky;
-    top: 10%;
+    top: 15%;
     transform: rotate(90deg);
 }
 .timeline-traveller i{

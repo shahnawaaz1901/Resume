@@ -330,8 +330,31 @@ header{
     width: 70%;
     border: 1px solid black;
     position: relative;
-    height: 500px;
+    /* height: 500px; */
 }
+
+.timeline-box{
+    position: relative;
+    left: 5%;
+    width: 40%;
+    height: 300px;
+    min-width: 300px;
+    border: 1px solid black;
+}
+
+.timeline-box:nth-child(2n){
+    left:55%
+}
+
+.timeline-box::after{
+    content: '';
+    height: 15px;
+    width: 15px;
+    background-color: gray;
+    border-radius: 50%;
+    display: block;
+}
+
 
 .timeline-divider{
     position: absolute;
@@ -339,12 +362,12 @@ header{
     top:10%;
     width: 0px;
     height: 70%;
-    border: 1px dashed grey;
+    border: 1px dashed rgb(187, 186, 186);
 }
 
 .timeline-traveller{
     position: sticky;
-    top: 15%;
+    top: 10%;
     transform: rotate(90deg);
 }
 .timeline-traveller i{

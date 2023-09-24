@@ -456,16 +456,59 @@ header{
     }
 }
 
-@media screen and (max-width:800px){
-    .timeline-box::after{
-        right: -14.5%;
+@media screen and (max-width:600px){
+    #education-container{
+        width: 90%;
+    }
+    .timeline-box{
+        left: 20%;
+        width: 80%;
+        margin: 15px 0px;
+    }
+    .timeline-box:nth-child(2n){
+        left:20%
     }
     
-    
-    .timeline-box:nth-child(2n)::after{
+    .timeline-box::after{
         left: -14.5%;
     }
+    
+    .timeline-divider{
+        left: 10%;
+        top: 7%;
+        height: 67%;
+    }
+    
+    .timeline-box::after{
+        left: -14%;
+    }
+
+    .timeline-box:nth-child(2n)::after{
+        left: -14%;
+    }
 }
+
+@media screen and (max-width:500px){
+    #education-container{
+        width: 95%;
+    }
+    .timeline-divider{
+        /* left: 10%; */
+        top: 7%;
+        /* height: 68%; */
+    }
+}
+
+@media screen and (max-width:450px){
+    #education-container{
+        width: 100%;
+    }
+    .timeline-divider{
+        top: 7%;
+        height: 68.5%;
+    }
+}
+
 /* Portfolio Secion */
 .portfolio-container{
     width: 75%;

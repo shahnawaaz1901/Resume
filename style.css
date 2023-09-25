@@ -314,7 +314,7 @@ header{
     height: 100%;
     padding-top: 5%;
     box-shadow: 1px 1px 4px 1px grey;
-    border-radius: 24px 0px 0px 24px;
+    /* border-radius: 24px 0px 0px 24px; */
 }
 
 .skill-name{
@@ -495,19 +495,35 @@ header{
         width: 95%;
     }
     .timeline-divider{
-        /* left: 10%; */
+        left: 9%;
         top: 6%;
         height: 70%;
+    }
+    .timeline-box::after{
+        left: -15.2%;
+    }
+    .timeline-box:nth-child(2n)::after{
+        left: -15.2%;
     }
 }
 
 @media screen and (max-width:450px){
-    #education-container{
-        width: 100%;
-    }
     .timeline-divider{
+        left: 7%;
         top: 6%;
         height: 70%;
+    }
+    .timeline-box{
+        left: 17%;
+    }
+    .timeline-box:nth-child(2n){
+        left:17%
+    }
+    .timeline-box::after{
+        left: -14%;
+    }
+    .timeline-box:nth-child(2n)::after{
+        left: -14%;
     }
 }
 

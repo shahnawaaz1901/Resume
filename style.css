@@ -723,9 +723,14 @@ textarea:focus {
   .contact-info {
     width: 90%;
     margin: auto;
+    padding-left: 0px;
   }
   .sub-heading{
     text-align: center;
+  }
+  .contact-content {
+    margin-left: 5px;
+    /* letter-spacing: 1px; */
   }
 }
 
@@ -737,6 +742,14 @@ textarea:focus {
   .contact-content {
     margin-left: 0px;
     letter-spacing: 1px;
+  }
+
+  .contact-form {
+    width: 95%;
+  }
+
+  .contact-info {
+    width: 95%;
   }
 
 }

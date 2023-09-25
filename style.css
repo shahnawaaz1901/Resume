@@ -146,7 +146,7 @@ nav .horizontal-list li a:hover {
 
 .bar-list {
   display: none;
-  position: sticky;
+  position: absolute;
   right: 5%;
   top: 5%;
 }
@@ -178,6 +178,7 @@ nav .horizontal-list li a:hover {
 .list ul li:hover {
   border-bottom: 1px solid black;
 }
+
 /* Header */
 header {
   margin: 0px;
@@ -211,6 +212,22 @@ header {
   box-shadow: 0px 0px 6px 3px white;
 }
 
+@media screen and (max-width: 900px) {
+  .nav {
+    display: none;
+  }
+  .bar-list {
+    display: block;
+    position: absolute;
+  }
+
+  .bar-list .list {
+    display: none;
+  }
+  .horizontal-list li {
+    margin: 0px 20px 15px 20px;
+  }
+}
 /* Profile Photo & About Section */
 
 .profile-image {
@@ -248,30 +265,12 @@ header {
 }
 
 @media screen and (max-width: 900px) {
-  .nav-bar {
-    display: none;
-  }
+
   .profile-image {
     margin-top: -15%;
   }
 
-  .bar-list {
-    display: block;
-    position: absolute;
-  }
-
-  .bar-list .list {
-    display: none;
-  }
-  .horizontal-list li {
-    margin: 0px 20px 15px 20px;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .profile-image {
-    margin-top: -20%;
-  }
+  
 }
 
 @media screen and (max-width: 500px) {

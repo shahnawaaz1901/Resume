@@ -398,7 +398,7 @@ header {
   left: 50%;
   top: 6%;
   width: 0px;
-  height: 69%;
+  height: 70%;
   border: 1px dashed rgb(187, 186, 186);
 }
 
@@ -414,15 +414,27 @@ header {
   top: 15%;
 }
 
+@media screen and (max-width: 1300px) {
+  .timeline-divider {
+    height: 68%;
+  }
+}
+
 @media screen and (max-width: 1200px) {
   #education-container {
     width: 80%;
+  }
+  .timeline-divider {
+    height: 69%;
   }
 }
 
 @media screen and (max-width: 1000px) {
   #education-container {
     width: 90%;
+  }
+  .timeline-box::after {
+    right: -14.2%;
   }
 }
 

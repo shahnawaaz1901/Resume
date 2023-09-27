@@ -1,7 +1,11 @@
 let navBar = document.querySelectorAll("nav a");
-let isVisible = false;
-let skillsSection = document.querySelector(".skills-container");
 let skillsBar = document.querySelectorAll(".skill-progress");
+// let skills = document.querySelectorAll('.skill');
+let isVisible = [];
+for(let i = 0; i < skillsBar.length;i++){
+  isVisible.push(false);
+}
+
 
 function smoothScroll() {
   for (let everyNav of navBar) {
@@ -29,6 +33,20 @@ function initializeBar() {
   }
 }
 
+function fillBar(bar){
+  let barWidth = bar.getAttribute('data-val');
+  console.log(bar, barWidth);
+  let count = 0;
+  let id = setInterval(function(){
+    if(count == barWidth){
+      clearInterval(id);
+      console.log('Clear the Interval !!');
+    }
+    bar.style.width = count + '%';
+    count++;
+  },5);
+}
+/* This functions fills All bar Simontanously when skills container is visible
 function fillBars(){
     for (let everyBar of skillsBar){
         let width = everyBar.getAttribute('data-val');
@@ -55,6 +73,18 @@ document.addEventListener("scroll", function () {
     isVisible = false;
   }
 });
+*/
 
+
+document.addEventListener('scroll',function(){
+  for(let i = 0; i < skillsBar.length;i++){
+    if(!isVisible[i] && skillsBar[i].getBoundingClientRect().top < window.innerHeight){
+      fillBar(skillsBar[i]);
+      isVisible[i] = true;
+    }else if(skillsBar[i].getBoundingClientRect().top > window.innerHeight){
+      isVisible[i] = false;
+    }
+  }
+})
 smoothScroll();
 initializeBar();

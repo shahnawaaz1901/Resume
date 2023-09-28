@@ -1,15 +1,31 @@
+/* CSS Variables for Colors*/
+:root{
+  --orange-color : #ec4d1c;
+  --blue-color : #2858a5;
+  --green-color : #0b8176;
+  --gold-color : #edcf92;
+  --grey-color : #777d8c;
+  --light-grey-color :lightgrey;
+  --dark-grey-color :#5f6572;
+  --light-purple-color :#93738c;
+  --black-color : black;
+  --dim-grey-color : dimgray;
+  --white-color : white;
+}
+
 /* Common For All */
 html {
   margin: 0px;
   padding: 0px;
-}
+}  
 body {
   margin: 0;
   padding: 0;
   font-size: 25px;
   overflow-x: hidden;
   max-width: 1550px;
-}
+}  
+
 /* For Hiding Default Scroll Bar and Reduce Width */
 body::-webkit-scrollbar{
   background-color: transparent;
@@ -29,7 +45,7 @@ section:nth-child(2n) {
   background-color: rgb(233, 233, 233);
 }
 .section-heading {
-  color: #2858a5;
+  color: var(--blue-color);
   font-weight: 100;
 }
 .section-heading span {
@@ -75,43 +91,43 @@ section:nth-child(2n) {
 
 /* Color */
 .color-blue {
-  color: #2858a5;
+  color: var(--blue-color);
 }
 
 .color-orange {
-  color: #eb8537;
+  color: var(--orange-color);
 }
 
 .color-grey {
-  color: #777d8c;
+  color: var(--grey-color);
 }
 
 .color-lightGrey {
-  color: lightgrey;
+  color: var(--light-grey-color);
 }
 
 .color-darkGrey {
-  color: #5f6572;
+  color: var(--dark-grey-color);
 }
 /* Background Color */
 .bg-gold {
-  background-color: #edcf92;
+  background-color: var(--gold-color);
 }
 
 .bg-blue {
-  background-color: #2858a5;
+  background-color: var(--blue-color);
 }
 
 .bg-orange {
-  background-color: #ec4d1c;
+  background-color: var(--orange-color);
 }
 
 .bg-green {
-  background-color: #0b8176;
+  background-color: var(--green-color);
 }
 
 .bg-light-purple {
-  background-color: #93738c;
+  background-color: var(--light-purple-color);
 }
 /* Percentage */
 .eightyFive-per {
@@ -131,8 +147,16 @@ section:nth-child(2n) {
 }
 
 .text-highlighter {
-  color: #2858a5;
   font-weight: 550;
+  color: var(--blue-color);
+}
+
+.coding-links{
+  color: var(--orange-color);
+}
+
+.coding-links:hover{
+  color: var(--blue-color);
 }
 
 /* Nav Bar */
@@ -142,7 +166,7 @@ section:nth-child(2n) {
 }
 
 .horizontal-list li a {
-  color: white;
+  color: var(--white-color);
   text-decoration: none;
   transition: all 1s ease-in-out;
   padding-bottom: 5px;
@@ -150,8 +174,8 @@ section:nth-child(2n) {
 }
 
 nav .horizontal-list li a:hover {
-  color: dimgrey;
-  border-bottom: 2px solid black;
+  color: var(--dim-grey-color);
+  border-bottom: 2px solid var(--black-color);
 }
 
 /* Bars */
@@ -168,7 +192,7 @@ nav .horizontal-list li a:hover {
 }
 
 .list ul li a {
-  color: black;
+  color: var(--black-color);
   text-decoration: none;
 }
 
@@ -181,7 +205,7 @@ nav .horizontal-list li a:hover {
 
 .list ul {
   padding: 0px;
-  box-shadow: 0px 0px 4px 4px black;
+  box-shadow: 0px 0px 4px 4px var(--black-color);
 }
 
 .bar-list:hover .list {
@@ -189,14 +213,14 @@ nav .horizontal-list li a:hover {
 }
 
 .list ul li:hover {
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid var(--black-color);
 }
 
 /* Header */
 header {
   margin: 0px;
   padding: 10px 0px;
-  color: white;
+  color: var(--white-color);
   background-image: url("./macbook_mouse.jpg");
   background-position: center;
   background-size: cover;
@@ -222,7 +246,7 @@ header {
 }
 
 .social-icons li:hover {
-  box-shadow: 0px 0px 6px 3px white;
+  box-shadow: 0px 0px 6px 3px var(--white-color);
 }
 
 @media screen and (max-width: 900px) {
@@ -251,7 +275,7 @@ header {
   opacity: 1.5;
   margin: auto;
   margin-top: -12%;
-  box-shadow: 1px 1px 4px 4px white;
+  box-shadow: 1px 1px 4px 4px var(--white-color);
 }
 
 .profile-image img {
@@ -265,7 +289,7 @@ header {
   font-size: 23px;
   font-weight: 500;
   line-height: 1.5;
-  color: dimgray;
+  color: var(--dim-grey-color);
 }
 
 #about a {
@@ -274,7 +298,6 @@ header {
 
 #about a:hover {
   text-decoration: underline;
-  color: #eb8537;
 }
 
 @media screen and (max-width: 900px) {
@@ -282,8 +305,6 @@ header {
   .profile-image {
     margin-top: -15%;
   }
-
-  
 }
 
 @media screen and (max-width: 500px) {
@@ -314,12 +335,12 @@ header {
 .skill-progress {
   height: 100%;
   padding-top: 5%;
-  box-shadow: 1px 1px 4px 1px grey;
+  box-shadow: 1px 1px 4px 1px var(--grey-color);
   /* border-radius: 24px 0px 0px 24px; */
 }
 
 .skill-name {
-  color: white;
+  color: var(--white-color);
   margin-left: 15px;
 }
 
@@ -584,12 +605,12 @@ header {
 }
 
 .project:hover {
-  box-shadow: 0px 0px 15px 3px grey;
+  box-shadow: 0px 0px 15px 3px var(--grey-color);
 }
 
 .project:hover .project-details {
   background-color: #80808078;
-  color: white;
+  color: var(--white-color);
 }
 
 @media screen and (max-width: 1200px) {
@@ -613,14 +634,14 @@ header {
 
 /* Contact */
 #contact {
-  color: white;
+  color: var(--white-color);
   width: 100%;
   background-image: linear-gradient(rgb(40, 87, 164), rgb(64, 48, 102));
 }
 
 .contact-heading {
   font-size: 40px;
-  color: white;
+  color: var(--white-color);
   font-weight: 100;
   margin-top: 0px;
 }
@@ -649,7 +670,7 @@ header {
 
 .contact-form input,
 textarea {
-  color: white;
+  color: var(--white-color);
   font-size: 25px;
   padding: 15px 10px;
   width: 90%;
@@ -658,12 +679,12 @@ textarea {
   margin: 15px 0px;
   border: transparent;
   border-radius: 15px;
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid var(--white-color);
 }
 
 .contact-form input:hover,
 textarea:hover {
-  box-shadow: 0px 0px 5px 1px white;
+  box-shadow: 0px 0px 5px 1px var(--white-color);
 }
 
 .contact-form input:focus,
@@ -673,14 +694,14 @@ textarea:focus {
 .contact-form button {
   padding: 10px 20px;
   letter-spacing: 2px;
-  color: white;
+  color: var(--white-color);
   background-color: transparent;
-  border: 1px solid white;
+  border: 1px solid var(--white-color);
 }
 
 .contact-form button:hover {
   color: #124ca9;
-  background-color: white;
+  background-color: var(--white-color);
   box-shadow: 0px 0px 5px 1px #124ca9;
 }
 

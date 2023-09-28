@@ -145,11 +145,13 @@ section:nth-child(2n) {
   color: white;
   text-decoration: none;
   transition: all 1s ease-in-out;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
 }
 
 nav .horizontal-list li a:hover {
   color: dimgrey;
-  text-decoration: underline black;
+  border-bottom: 2px solid black;
 }
 
 /* Bars */
@@ -172,7 +174,8 @@ nav .horizontal-list li a:hover {
 
 .list ul li {
   margin: 10px;
-  transition: 0.5s all ease-in;
+  padding-bottom: 5px;
+  transition: all 0.5s ease-in;
   /* border-bottom: 1px solid black; */
 }
 

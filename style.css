@@ -10,6 +10,16 @@ body {
   overflow-x: hidden;
   max-width: 1550px;
 }
+/* For Hiding Default Scroll Bar and Reduce Width */
+body::-webkit-scrollbar{
+  background-color: transparent;
+  width: 8px;
+}
+/* Adding Custom Scroll Bar */
+body::-webkit-scrollbar-thumb{
+  background-image: linear-gradient(blue, red);
+  border-radius: 8px;
+}
 
 section {
   width: 100%;

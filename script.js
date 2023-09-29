@@ -35,12 +35,10 @@ function initializeBar() {
 
 function fillBar(bar){
   let barWidth = bar.getAttribute('data-val');
-  console.log(bar, barWidth);
   let count = 0;
   let id = setInterval(function(){
     if(count == barWidth){
       clearInterval(id);
-      console.log('Clear the Interval !!');
     }
     bar.style.width = count + '%';
     count++;

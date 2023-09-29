@@ -304,6 +304,9 @@ header {
   .profile-image {
     margin-top: -18%;
   }
+  #about {
+    width: 80%;
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -332,14 +335,12 @@ header {
   border-radius: 1.3rem;
   overflow: hidden;
   background-color: #d3d3d3;
-  /* border: 1px solid black; */
 }
 
 .skill-progress {
   height: 100%;
   padding-top: 5%;
   box-shadow: 1px 1px 4px 1px var(--grey-color);
-  /* border-radius: 24px 0px 0px 24px; */
 }
 
 .skill-name {

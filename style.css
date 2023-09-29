@@ -1,38 +1,38 @@
 /* CSS Variables for Colors*/
-:root{
-  --orange-color : #ec4d1c;
-  --blue-color : #2858a5;
-  --green-color : #0b8176;
-  --gold-color : #edcf92;
-  --grey-color : #777d8c;
-  --light-grey-color :lightgrey;
-  --dark-grey-color :#5f6572;
-  --light-purple-color :#93738c;
-  --black-color : black;
-  --dim-grey-color : dimgray;
-  --white-color : white;
+:root {
+  --orange-color: #ec4d1c;
+  --blue-color: #2858a5;
+  --green-color: #0b8176;
+  --gold-color: #edcf92;
+  --grey-color: #777d8c;
+  --light-grey-color: lightgrey;
+  --dark-grey-color: #5f6572;
+  --light-purple-color: #93738c;
+  --black-color: black;
+  --dim-grey-color: dimgray;
+  --white-color: white;
 }
 
 /* Common For All */
 html {
   margin: 0px;
   padding: 0px;
-}  
+}
 body {
   margin: 0;
   padding: 0;
   font-size: 25px;
   overflow-x: hidden;
   max-width: 1550px;
-}  
+}
 
 /* For Hiding Default Scroll Bar and Reduce Width */
-body::-webkit-scrollbar{
+body::-webkit-scrollbar {
   background-color: transparent;
   width: 8px;
 }
 /* Adding Custom Scroll Bar */
-body::-webkit-scrollbar-thumb{
+body::-webkit-scrollbar-thumb {
   background-image: linear-gradient(blue, red);
   border-radius: 8px;
 }
@@ -151,11 +151,11 @@ section:nth-child(2n) {
   color: var(--blue-color);
 }
 
-.coding-links{
+.coding-links {
   color: var(--orange-color);
 }
 
-.coding-links:hover{
+.coding-links:hover {
   color: var(--blue-color);
 }
 
@@ -301,22 +301,25 @@ header {
 }
 
 @media screen and (max-width: 900px) {
-
   .profile-image {
-    margin-top: -15%;
+    margin-top: -18%;
   }
 }
 
 @media screen and (max-width: 500px) {
   .profile-image {
     margin-top: -25%;
+    height: 260px;
+    width: 260px;
+  }
+  #about {
+    width: 90%;
   }
 }
 
 /* Skills Section */
 .skills-container {
   width: 70%;
-  /* border: 1px solid black; */
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -347,6 +350,9 @@ header {
 @media screen and (max-width: 400px) {
   .skills-container {
     width: 85%;
+  }
+  .skill-progress {
+    padding-top: 3%;
   }
 }
 
@@ -770,7 +776,7 @@ textarea:focus {
     margin: auto;
     padding-left: 0px;
   }
-  .sub-heading{
+  .sub-heading {
     text-align: center;
   }
   .contact-content {
@@ -796,5 +802,4 @@ textarea:focus {
   .contact-info {
     width: 95%;
   }
-
 }

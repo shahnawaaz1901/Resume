@@ -2,11 +2,11 @@ let navBar = document.querySelectorAll("nav a");
 let skillsBar = document.querySelectorAll(".skill-progress");
 // let skills = document.querySelectorAll('.skill');
 let isVisible = [];
-for(let i = 0; i < skillsBar.length;i++){
+for (let i = 0; i < skillsBar.length; i++) {
   isVisible.push(false);
 }
 
-
+Google;
 function smoothScroll() {
   for (let everyNav of navBar) {
     everyNav.addEventListener("click", function (e) {
@@ -16,13 +16,19 @@ function smoothScroll() {
         return;
       }
       let destinationElement = document.getElementById(destination);
+      let i = 1;
       let id = setInterval(function () {
         let distance = destinationElement.getBoundingClientRect();
-        if (distance.y <= 0) {
+        if (
+          i >=
+          distance.top /*|| distance.bottom == document.querySelector('body').getBoundingClientRect().bottom*/
+        ) {
           clearInterval(id);
         }
-        scrollBy(0, 10);
-      }, 1);
+        console.log(i);
+        scrollBy(0, i);
+        i += 5;
+      }, 15);
     });
   }
 }
@@ -33,16 +39,16 @@ function initializeBar() {
   }
 }
 
-function fillBar(bar){
-  let barWidth = bar.getAttribute('data-val');
+function fillBar(bar) {
+  let barWidth = bar.getAttribute("data-val");
   let count = 0;
-  let id = setInterval(function(){
-    if(count == barWidth){
+  let id = setInterval(function () {
+    if (count == barWidth) {
       clearInterval(id);
     }
-    bar.style.width = count + '%';
+    bar.style.width = count + "%";
     count++;
-  },5);
+  }, 5);
 }
 /* This functions fills All bar Simontanously when skills container is visible
 function fillBars(){
@@ -73,16 +79,18 @@ document.addEventListener("scroll", function () {
 });
 */
 
-
-document.addEventListener('scroll',function(){
-  for(let i = 0; i < skillsBar.length;i++){
-    if(!isVisible[i] && skillsBar[i].getBoundingClientRect().top < window.innerHeight){
+document.addEventListener("scroll", function () {
+  for (let i = 0; i < skillsBar.length; i++) {
+    if (
+      !isVisible[i] &&
+      skillsBar[i].getBoundingClientRect().top < window.innerHeight
+    ) {
       fillBar(skillsBar[i]);
       isVisible[i] = true;
-    }else if(skillsBar[i].getBoundingClientRect().top > window.innerHeight){
+    } else if (skillsBar[i].getBoundingClientRect().top > window.innerHeight) {
       isVisible[i] = false;
     }
   }
-})
+});
 smoothScroll();
 initializeBar();

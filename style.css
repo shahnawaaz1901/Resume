@@ -710,6 +710,7 @@ textarea:focus {
   color: #124ca9;
   background-color: var(--white-color);
   box-shadow: 0px 0px 5px 1px #124ca9;
+  cursor: pointer;
 }
 
 .sub-heading {

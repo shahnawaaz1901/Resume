@@ -1,12 +1,10 @@
 let navBar = document.querySelectorAll("nav a");
 let skillsBar = document.querySelectorAll(".skill-progress");
-// let skills = document.querySelectorAll('.skill');
 let isVisible = [];
 for (let i = 0; i < skillsBar.length; i++) {
   isVisible.push(false);
 }
 
-Google;
 function smoothScroll() {
   for (let everyNav of navBar) {
     everyNav.addEventListener("click", function (e) {
@@ -50,34 +48,6 @@ function fillBar(bar) {
     count++;
   }, 5);
 }
-/* This functions fills All bar Simontanously when skills container is visible
-function fillBars(){
-    for (let everyBar of skillsBar){
-        let width = everyBar.getAttribute('data-val');
-        let count = 0;
-        let id = setInterval(function(){
-            if(count == width){
-                clearInterval(id);
-            }
-            everyBar.style.width = count + '%';
-            count++;
-        },6);
-    }
-}
-
-
-document.addEventListener("scroll", function () {
-  if (
-    skillsSection.getBoundingClientRect().top < window.innerHeight &&
-    isVisible == false
-  ) {
-    fillBars();
-    isVisible = true;
-  } else if (skillsSection.getBoundingClientRect().top > window.innerHeight) {
-    isVisible = false;
-  }
-});
-*/
 
 document.addEventListener("scroll", function () {
   for (let i = 0; i < skillsBar.length; i++) {
@@ -94,3 +64,19 @@ document.addEventListener("scroll", function () {
 });
 smoothScroll();
 initializeBar();
+
+const sendButton = document.getElementById("sendBtn");
+const userEmail = document.getElementById("email");
+const userName = document.getElementById("name");
+const msg = document.getElementById("msg");
+sendButton.addEventListener("click", (e) => {
+  e.preventDefault();
+  const object = {
+    name: userName.value,
+    email: userEmail.value,
+    massage: msg.value,
+  };
+  console.log(object);
+  (userName.value = ""), (userEmail.value = ""), (msg.value = "");
+  alert("ThankYou for ReachingOut We'll Connect you in a While");
+});

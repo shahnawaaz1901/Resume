@@ -69,7 +69,7 @@ const sendButton = document.getElementById("sendBtn");
 const userEmail = document.getElementById("email");
 const userName = document.getElementById("name");
 const msg = document.getElementById("msg");
-sendButton.addEventListener("click", (e) => {
+sendButton.addEventListener("click", async (e) => {
   e.preventDefault();
   const object = {
     name: userName.value,
@@ -78,5 +78,13 @@ sendButton.addEventListener("click", (e) => {
   };
   console.log(object);
   (userName.value = ""), (userEmail.value = ""), (msg.value = "");
+
+  await fetch("https://resume-server-api.onrender.com/api/contact/sendMail", {
+    method: "Post",
+    body: JSON.stringify(object),
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
   alert("ThankYou for ReachingOut We'll Connect you in a While");
 });

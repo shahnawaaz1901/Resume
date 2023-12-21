@@ -79,6 +79,7 @@ sendButton.addEventListener("click", async (e) => {
   console.log(object);
   (userName.value = ""), (userEmail.value = ""), (msg.value = "");
 
+  alert("ThankYou for ReachingOut We'll Connect you in a While");
   await fetch("https://resume-server-api.onrender.com/api/contact/sendMail", {
     method: "Post",
     body: JSON.stringify(object),
@@ -86,5 +87,4 @@ sendButton.addEventListener("click", async (e) => {
       "Content-Type": "application/json",
     },
   });
-  alert("ThankYou for ReachingOut We'll Connect you in a While");
 });
